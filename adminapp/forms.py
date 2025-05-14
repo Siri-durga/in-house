@@ -256,9 +256,9 @@ class AddFacultyForm(forms.Form):
     )
 
 
-class AdminAnnouncement(forms.Form):
-    announcement = forms.CharField(
-        label='Enter Announcement', max_length=150, required=True,
-        widget=forms.TextInput(
-            attrs={'class': 'form-control', 'placeholder': 'Enter your announcement here'})
-    )
+#class AdminAnnouncement(forms.Form):
+ #   announcement = forms.CharField(
+ #       label='Enter Announcement', max_length=150, required=True,
+ #       widget=forms.TextInput(
+ #           attrs={'class': 'form-control', 'placeholder': 'Enter your announcement here'})
+ #   )

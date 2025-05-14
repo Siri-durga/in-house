@@ -45,7 +45,7 @@ def viewstaffprofile(req):
 
 def staffannouncement(req):
     studentemail = req.session['staffemail']
-    all_messages = AdminAnnounce.objects.all()
+   all_messages = AdminAnnounce.objects.all()
     context = {}
     context['form'] = StaffAnnouncement()
     if req.method == "POST":
