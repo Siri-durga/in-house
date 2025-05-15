@@ -43,25 +43,25 @@ def viewstaffprofile(req):
     return render(req, VIEWSTAFFPROFILEPAGE, {'all_faculty': all_faculty})
 
 
-def staffannouncement(req):
-    studentemail = req.session['staffemail']
-   all_messages = AdminAnnounce.objects.all()
-    context = {}
-    context['form'] = StaffAnnouncement()
-    if req.method == "POST":
-        form = StaffAnnouncement(req.POST)
-        if form.is_valid():
-            announcement = form.cleaned_data['staffannouncement']
-            studentemail = req.session['staffemail']
+#def staffannouncement(req):
+#    studentemail = req.session['staffemail']
+#    all_messages = AdminAnnounce.objects.all()
+ #   context = {}
+ #   context['form'] = StaffAnnouncement()
+ #   if req.method == "POST":
+ #       form = StaffAnnouncement(req.POST)
+ #       if form.is_valid():
+ #           announcement = form.cleaned_data['staffannouncement']
+ #           studentemail = req.session['staffemail']
 
-            data = AdminAnnounce(
-                announcement=announcement,
-                senderemail=studentemail
-            )
-            data.save()
-            return render(req, STAFFANNOUNCEMENTPAGE, {'form': StaffAnnouncement(), 'all_messages': all_messages, 'studentemail': studentemail})
+  #          data = AdminAnnounce(
+   #             announcement=announcement,
+   #             senderemail=studentemail
+   #         )
+   #         data.save()
+   #         return render(req, STAFFANNOUNCEMENTPAGE, {'form': StaffAnnouncement(), 'all_messages': all_messages, 'studentemail': studentemail})
 
-    return render(req, STAFFANNOUNCEMENTPAGE, {'form': StaffAnnouncement(), 'all_messages': all_messages, 'studentemail': studentemail})
+   # return render(req, STAFFANNOUNCEMENTPAGE, {'form': StaffAnnouncement(), 'all_messages': all_messages, 'studentemail': studentemail})
 
 def staffinvigilationschedule(req):
     dc = AddTimeTable.objects.all()
