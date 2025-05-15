@@ -48,9 +48,9 @@
         {% for student in all_students %}
         <tr>
             <td>{{ student.name }}</td>
-            <td>{{ student.rollnumber }}</td>
+            <td>{{ "23" }}{{ student.rollnumber|slice:"2:" }}</td>
             <td>{{ student.department }}</td>
-            <td>{{ student.email }}</td>
+            <td>{{ "23" }}{{ student.rollnumber|slice:"2:" }}@aec.edu.in</td>
             <td>{{ student.contact }}</td>
             <td>{{ student.year }}</td>
             <td>{{ student.semester }}</td>
