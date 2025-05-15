@@ -27,7 +27,8 @@ import re
 # AddTimeTable.objects.all().delete()
 # Examallotment.objects.all().delete()
 # AddexamHall.objects.all().delete()
-# AddStudent.objects.all().delete()
+#AddStudent.objects.all().delete()
+#AddFaculty.objects.all().delete()
 
 
 
@@ -342,8 +343,8 @@ def addfaculty(req):
             subject = form.cleaned_data['subject']
             semester = form.cleaned_data['semester']
             year = form.cleaned_data['year']
-            image = form.cleaned_data['image']
-            profilename = image.name
+            #image = form.cleaned_data['image']
+            #profilename = image.name
 
             try:
                 # Attempt to save faculty member
@@ -355,8 +356,8 @@ def addfaculty(req):
                     subject=subject,
                     semester=semester,
                     year=year,
-                    image=image,
-                    profilename=profilename,
+                    #image=image,
+                    #profilename=profilename,
                     password=random_password
                 )
             # # Mail Code
