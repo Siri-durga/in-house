@@ -13,9 +13,9 @@ class StaffLoginForm(forms.Form):
         widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
 
-class StaffAnnouncement(forms.Form):
-    staffannouncement = forms.CharField(
-        label='Enter Announcement', max_length=50, required=True,
-        widget=forms.TextInput(
-            attrs={'class': 'form-control', 'placeholder': 'Enter your announcement here'})
-    )
+#class StaffAnnouncement(forms.Form):
+    #staffannouncement = forms.CharField(
+        #label='Enter Announcement', max_length=50, required=True,
+        #widget=forms.TextInput(
+           # attrs={'class': 'form-control', 'placeholder': 'Enter your announcement here'})
+   # )

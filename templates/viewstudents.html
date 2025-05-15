@@ -42,7 +42,7 @@
             <th>Contact</th>
             <th>Year</th>
             <th>Semester</th>
-            <!--<th>Profile Photo</th>-->
+            
             <th>Delete</th>
         </tr>
         {% for student in all_students %}
@@ -54,7 +54,7 @@
             <td>{{ student.contact }}</td>
             <td>{{ student.year }}</td>
             <td>{{ student.semester }}</td>
-            <td><img src="{{ student.profile_url }}" alt="Profile Photo" style="max-width: 100px; max-height: 100px;"></td>
+            <!-- <td><img src="{{ student.profile_url }}" alt="Profile Photo" style="max-width: 100px; max-height: 100px;"></td>-->
             <td><a href="{% url 'delete' student.id %}" class="btn btn-danger">Delete</a></td>
 
         </tr>

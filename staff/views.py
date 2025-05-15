@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import StaffLoginForm, StaffAnnouncement
+from .forms import StaffLoginForm
 from adminapp.models import AddFaculty, AdminAnnounce, AddTimeTable
 from django.contrib import messages
 
