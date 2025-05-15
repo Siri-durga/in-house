@@ -29,6 +29,8 @@ import re
 # AddexamHall.objects.all().delete()
 # AddStudent.objects.all().delete()
 
+
+
 def addtimetable(request):
     if request.method == 'POST':
         form = AddTimeTableForm(request.POST)
@@ -102,7 +104,7 @@ def addstudents(req):
                         contact = re.sub(r'\D', '', str(row['Contact']))
                         year = row['Year']
                         semester = row['Semester']
-                        profile_url = row['Profile URL']
+                        #profile_url = row['Profile URL']
 
                         # Generate a random password
                         length = 8
@@ -118,7 +120,7 @@ def addstudents(req):
                             contact=contact,
                             year=year,
                             semester=semester,
-                            profile_url=profile_url,
+                            #profile_url=profile_url,
                             password=random_password
                         )
 
@@ -379,30 +381,27 @@ def addfaculty(req):
 
     return render(req, 'addfaculty.html', context)
 
-def addannouncement(req):
-    two_days_content = timezone.now()-timezone.timedelta(days=2)
-    messages_to_delete = AdminAnnounce.objects.filter(annuncementdate=two_days_content)
-    deleted_data,_ = messages_to_delete.delete()
-    all_messages = AdminAnnounce.objects.all()
-    context = {}
-    context['form'] = AdminAnnouncement()
+#def addannouncement(req):
+ #   two_days_content = timezone.now()-timezone.timedelta(days=2)
+  #  messages_to_delete = AdminAnnounce.objects.filter(annuncementdate=two_days_content)
+  #  all_messages = AdminAnnounce.objects.all()
+  #  context = {}
+   # context['form'] = AdminAnnouncement()
+#
+ #      form = AdminAnnouncement(req.POST)
+  #      print(form.is_valid())
+   #     if form.is_valid():
+    #       adminemail = req.session['adminemail']
+     #       data = AdminAnnounce(
+     #           announcement=announcement,
+     #           senderemail=adminemail
+     #       )
+     #       data.save()
 
-    if req.method == "POST":
-        form = AdminAnnouncement(req.POST)
-        print(form.is_valid())
-        if form.is_valid():
-            announcement = form.cleaned_data['announcement']
-            adminemail = req.session['adminemail']
-            data = AdminAnnounce(
-                announcement=announcement,
-                senderemail=adminemail
-            )
-            data.save()
+     #       # Correct syntax for passing context to the template
+     #       return render(req, ADDANNOUNCEMENTPAGE, {'form': AdminAnnouncement(), 'all_messages': all_messages})
 
-            # Correct syntax for passing context to the template
-            return render(req, ADDANNOUNCEMENTPAGE, {'form': AdminAnnouncement(), 'all_messages': all_messages})
-
-    return render(req, ADDANNOUNCEMENTPAGE, {'form': AdminAnnouncement(), 'all_messages': all_messages})
+   # return render(req, ADDANNOUNCEMENTPAGE, {'form': AdminAnnouncement(), 'all_messages': all_messages})
 
 
 

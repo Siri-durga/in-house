@@ -39,10 +39,10 @@ def studentlogin(req):
 def viewstudentprofile(req):
     # Ensure user is authenticated before accessing the profile
     if 'student_roll_number' in req.session:
-        roll_number = req.session['student_roll_number']
-        student_profile = AddStudent.objects.filter(rollnumber=roll_number).first()
-        if student_profile:
-            # Pass the student_profile as a list to the template
+       roll_number = req.session['student_roll_number']
+       student_profile = AddStudent.objects.filter(rollnumber=roll_number).first()
+       if student_profile:
+            #Pass the student_profile as a list to the template
             return render(req, VIEWSTUDENTPROFILEPAGE, {'student_profile': [student_profile]})
     # If user is not authenticated or profile doesn't exist, redirect to login
     return redirect('viewstudentprofile')
