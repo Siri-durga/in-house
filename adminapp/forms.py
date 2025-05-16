@@ -56,27 +56,26 @@ year = [
 
 subjects = [
     ('Select Subject', 'selects subject'),
-    ('Mathematics and Discrete Structures', 'mathematics and discrete structures'),
+    ('Probability and Statistics', 'probability and statistics'),
 
-    ('Computer Networks', 'computer networks'),
+    ('Software Engineering', 'software engineering'),
 
     ('Databases', 'databases'),
 
-    ('Web Technologies', 'web technologies'),
+    ('MEFA', 'MEFA'),
 
-    ('Data Structures', 'data structures'),
 
     ('Operating Systems', 'operating systems'),
 
-    ('Discrete Mathematics ', 'discrete mathematics '),
+    ('Database Lab ', 'database lab '),
 
-    ('Introduction to Probability and Statistics ',
-        'introduction to probability and statistics '),
+    ('Full Stack Development',
+        'Full Stack Development'),
 
-    ('Computer Organization and Architecture ',
-        'computer organization and architecture '),
+    ('Operating systems lab ',
+        'Operating systems lab '),
 
-    ('Object Oriented Programming', 'object oriented programming'),
+    ('Cognitive English lab', 'Cognitive English lab'),
 
 ]
 
@@ -250,10 +249,10 @@ class AddFacultyForm(forms.Form):
         label='Year', choices=year, required=True,
         widget=forms.Select(attrs={'class': 'form-control'})
     )
-    image = forms.ImageField(
-        label='Faculty Profile', required=True,
-        widget=forms.FileInput(attrs={'class': 'form-control'})
-    )
+    #image = forms.ImageField(
+       # label='Faculty Profile', required=True,
+        #widget=forms.FileInput(attrs={'class': 'form-control'})
+   # )
 
 
 #class AdminAnnouncement(forms.Form):

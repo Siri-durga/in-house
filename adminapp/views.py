@@ -27,7 +27,7 @@ import re
 # AddTimeTable.objects.all().delete()
 # Examallotment.objects.all().delete()
 # AddexamHall.objects.all().delete()
-#AddStudent.objects.all().delete()
+AddStudent.objects.all().delete()
 #AddFaculty.objects.all().delete()
 
 
@@ -326,7 +326,7 @@ def addfaculty(req):
     context = {}
     context['form'] = AddFacultyForm()
     if req.method == "POST":
-        form = AddFacultyForm(req.POST, req.FILES)
+        form = AddFacultyForm(req.POST)
         if form.is_valid():
             length = 8
             characters = string.ascii_letters + string.digits
