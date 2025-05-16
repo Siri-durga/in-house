@@ -22,19 +22,19 @@
 
     /* Style for the faculty card image */
     .faculty-card-img {
-        width: 60%; /* Make the image fill the container width */
+        width: 40%; /* Make the image fill the container width */
         height: auto; /* Maintain aspect ratio */
         
     }
 
     /* Style for the faculty card body */
     .faculty-card-body {
-        padding: 20px;
+        padding: 30px;
     }
 
     /* Style for the faculty card title */
     .faculty-card-title {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         color: #333;
         margin-bottom: 10px;
@@ -68,16 +68,17 @@
         {% for i in all_faculties %}
         <div class="col-md-3">
             <div class="faculty-card">
-                <div class="faculty-card-img-container">
+              <!-- <div class="faculty-card-img-container">
                     <img src="/static/faculty/{{i.profilename}}" class="faculty-card-img" alt="Faculty Image">
-                </div>
+                </div>-->
                 <div class="faculty-card-body">
                     <h6 class="faculty-card-title">{{ i.name }}</h6>
+                    <b><p class="faculty-card-details">Subject: {{i.subject}}</p>
                     <p class="faculty-card-details">Email: {{ i.email }}</p>
                     <p class="faculty-card-details">Contact: {{i.contact}}</p>
                     <p class="faculty-card-details">Branch: {{ i.branch }}</p>
                     <p class="faculty-card-details">Semester: {{i.semester}}</p>
-                    <p class="faculty-card-details">Year: {{i.year}}</p>
+                    <p class="faculty-card-details">Year: {{i.year}}</p></b>
                     <center><a href="{% url 'deletefaculty' i.id %}" class="btn btn-danger">Delete</a></center>
                 </div>
             </div>
