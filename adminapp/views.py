@@ -24,10 +24,10 @@ from openpyxl.styles import Font,Alignment
 import re
 
 # To Delete Tables Data in Database
-# AddTimeTable.objects.all().delete()
-# Examallotment.objects.all().delete()
+#AddTimeTable.objects.all().delete()
+#Examallotment.objects.all().delete()
 # AddexamHall.objects.all().delete()
-AddStudent.objects.all().delete()
+#AddStudent.objects.all().delete()
 #AddFaculty.objects.all().delete()
 
 
