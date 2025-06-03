@@ -217,12 +217,15 @@ def get_room_elements(room_number, room_data):
     elements = []
 
     # Add Aditya Engineering College logo on the left
-    logo_path = 'D:\AEC\BTech_Projects\Exam_seating_autogenratedSystem-Project\Final-Year-Project-master\Adityalogo.png'  # Update this with the path to your logo file
+    logo_path = '/workspaces/in-house/Adityalogo.png'  # Update this with the path to your logo file
     logo = Image(logo_path, width=150, height=100)  # Adjust width and height to 25% of the original size
 
+
+    college_name_para = Paragraph("<b>ADITYA UNVERSITY</b>", getSampleStyleSheet()['Title'])
+
     # # Add college name after the logo
-    college_name = "Aditya University"
-    college_name_para = Paragraph(college_name, getSampleStyleSheet()['Heading1'])
+    
+    
    
 
 
